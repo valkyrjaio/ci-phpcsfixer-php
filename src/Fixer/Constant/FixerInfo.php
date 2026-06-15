@@ -20,12 +20,12 @@ final class FixerInfo
      *
      * @var non-empty-string
      */
-    public const string VERSION = '26.1.6';
+    public const string VERSION = '26.1.7';
 
     /**
      * The Fixer package version build datetime.
      *
      * @var non-empty-string
      */
-    public const string VERSION_BUILD_DATE_TIME = 'June 10 2026 11:39:00 MST';
+    public const string VERSION_BUILD_DATE_TIME = 'June 14 2026 20:19:14 MST';
 }
