@@ -43,6 +43,13 @@ class Rules
                     '@Symfony'                                 => true,
                     '@Symfony:risky'                           => true,
                     'no_unused_imports'                        => true,
+                    // Import global functions and force native calls to resolve at
+                    // compile time. In a namespaced file an unqualified builtin call
+                    // (e.g. strpos()) emits a runtime "namespace-local function?"
+                    // lookup, which path coverage counts as an always-uncovered
+                    // branch. Importing the function removes that phantom branch.
+                    'native_function_invocation'               => ['include' => ['@all'], 'scope' => 'namespaced', 'strict' => true],
+                    'global_namespace_import'                  => ['import_classes' => false, 'import_constants' => false, 'import_functions' => true],
                     'align_multiline_comment'                  => true,
                     'array_indentation'                        => true,
                     'assign_null_coalescing_to_coalesce_equal' => true,
