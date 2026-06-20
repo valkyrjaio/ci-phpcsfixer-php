@@ -41,7 +41,7 @@ final class RulesTest extends FixerTestCase
             'native_function_invocation'               => [
                 'include' => ['@all'],
                 'scope'   => 'namespaced',
-                'strict'  => true
+                'strict'  => true,
             ],
             'align_multiline_comment'                  => true,
             'array_indentation'                        => true,
