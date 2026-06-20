@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Valkyrja PHP CS Fixer package.
+ * This file is part of the Valkyrja Framework package.
  *
  * (c) Melech Mizrachi <melechmizrachi@gmail.com>
  *
@@ -48,7 +48,11 @@ class Rules
                     // "namespace-local function?" lookup, which path coverage counts as
                     // an always-uncovered branch. Qualifying the call (then importing it
                     // via global_namespace_import below) removes that phantom branch.
-                    'native_function_invocation'               => ['include' => ['@all'], 'scope' => 'namespaced', 'strict' => true],
+                    'native_function_invocation'               => [
+                        'include' => ['@all'],
+                        'scope'   => 'namespaced',
+                        'strict'  => true,
+                    ],
                     'align_multiline_comment'                  => true,
                     'array_indentation'                        => true,
                     'assign_null_coalescing_to_coalesce_equal' => true,
