@@ -38,6 +38,11 @@ final class RulesTest extends FixerTestCase
             '@Symfony'                                 => true,
             '@Symfony:risky'                           => true,
             'no_unused_imports'                        => true,
+            'native_function_invocation'               => [
+                'include' => ['@all'],
+                'scope'   => 'namespaced',
+                'strict'  => true
+            ],
             'align_multiline_comment'                  => true,
             'array_indentation'                        => true,
             'assign_null_coalescing_to_coalesce_equal' => true,
