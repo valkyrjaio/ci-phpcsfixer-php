@@ -15,14 +15,6 @@ use Valkyrja\Fixer\Rules;
 
 require_once __DIR__ . '/../../../vendor/autoload.php';
 
-$header = <<<EOF
-    This file is part of the Valkyrja PHP CS Fixer package.
-
-    Copyright (c) 2016-present Melech Mizrachi
-
-    Released under the MIT License. See LICENSE.md for details.
-    EOF;
-
 $finder = Finder::create()
     // Finder ignores a dot directory by default, which put every PHP file under
     // .github outside the header rule. Those files are this repository's own source
@@ -32,4 +24,4 @@ $finder = Finder::create()
     ->exclude('vendor')
     ->in(__DIR__ . '/../../../');
 
-return Rules::getConfig($finder, $header);
+return Rules::getConfig($finder, 'Valkyrja PHP CS Fixer');

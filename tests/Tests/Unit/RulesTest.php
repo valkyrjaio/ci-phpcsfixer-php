@@ -12,10 +12,13 @@ declare(strict_types=1);
 
 namespace Valkyrja\Fixer\Tests\Unit;
 
+use InvalidArgumentException;
 use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
 use Valkyrja\Fixer\Rules;
 use Valkyrja\Fixer\Tests\Abstract\FixerTestCase;
+
+use function str_replace;
 
 final class RulesTest extends FixerTestCase
 {
@@ -209,7 +212,7 @@ final class RulesTest extends FixerTestCase
 
     public function testGetConfigReturnsConfig(): void
     {
-        $config = Rules::getConfig(new Finder(), 'Header');
+        $config = Rules::getConfig(new Finder(), 'Valkyrja Framework');
 
         self::assertInstanceOf(Config::class, $config);
     }
@@ -218,26 +221,73 @@ final class RulesTest extends FixerTestCase
     {
         $finder = new Finder();
 
-        self::assertSame($finder, Rules::getConfig($finder, 'Header')->getFinder());
+        self::assertSame($finder, Rules::getConfig($finder, 'Valkyrja Framework')->getFinder());
     }
 
     public function testGetConfigAllowsRisky(): void
     {
-        self::assertTrue(Rules::getConfig(new Finder(), 'Header')->getRiskyAllowed());
+        self::assertTrue(Rules::getConfig(new Finder(), 'Valkyrja Framework')->getRiskyAllowed());
     }
 
     public function testGetConfigRegistersNoCustomFixers(): void
     {
-        self::assertSame([], Rules::getConfig(new Finder(), 'Header')->getCustomFixers());
+        self::assertSame([], Rules::getConfig(new Finder(), 'Valkyrja Framework')->getCustomFixers());
     }
 
     public function testGetConfigRulesMatchExpectedExactly(): void
     {
-        $header = 'My custom header';
+        $package = 'My Custom Package';
 
         self::assertSame(
-            self::expectedRules($header),
-            Rules::getConfig(new Finder(), $header)->getRules(),
+            self::expectedRules(Rules::getHeader($package)),
+            Rules::getConfig(new Finder(), $package)->getRules(),
         );
+    }
+
+    public function testGetHeaderStatesThePackageName(): void
+    {
+        self::assertSame(
+            <<<HEADER
+                This file is part of the Valkyrja Framework package.
+
+                Copyright (c) 2016-present Melech Mizrachi
+
+                Released under the MIT License. See LICENSE.md for details.
+                HEADER,
+            Rules::getHeader('Valkyrja Framework'),
+        );
+    }
+
+    public function testGetHeaderChangesOnlyThePackageName(): void
+    {
+        self::assertSame(
+            str_replace('One', 'Two', Rules::getHeader('One')),
+            Rules::getHeader('Two'),
+        );
+    }
+
+    public function testGetConfigBuildsTheHeaderFromThePackageName(): void
+    {
+        $rules = Rules::getConfig(new Finder(), 'Valkyrja Framework')->getRules();
+
+        self::assertIsArray($rules['header_comment']);
+        self::assertSame(
+            Rules::getHeader('Valkyrja Framework'),
+            $rules['header_comment']['header'],
+        );
+    }
+
+    public function testGetHeaderRejectsAnAssembledHeader(): void
+    {
+        $this->expectException(InvalidArgumentException::class);
+
+        Rules::getHeader("This file is part of the Valkyrja Framework package.\n\nCopyright (c) 2016-present Melech Mizrachi");
+    }
+
+    public function testGetConfigRejectsAnAssembledHeader(): void
+    {
+        $this->expectException(InvalidArgumentException::class);
+
+        Rules::getConfig(new Finder(), "This file is part of the Valkyrja Framework package.\n");
     }
 }

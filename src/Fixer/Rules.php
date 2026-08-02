@@ -12,14 +12,63 @@ declare(strict_types=1);
 
 namespace Valkyrja\Fixer;
 
+use InvalidArgumentException;
 use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
 use PhpCsFixer\Runner\Parallel\ParallelConfig;
 
+use function str_contains;
+
 class Rules
 {
-    public static function getConfig(Finder $finder, string $header): Config
+    /**
+     * Builds the copyright header for a package.
+     *
+     * The header states the package name, and every other line is the same in each repository. This
+     * package therefore holds the text, and a repository states only its own name. A repository that
+     * keeps a copy of the whole header can drift from this text, and no tool reports the drift.
+     * COPYRIGHT_HEADER.md in the `.github` repository specifies the text, and it maps each
+     * repository to its package name.
+     *
+     * @param string $package The package name, for example `Valkyrja Framework`
+     *
+     * @throws InvalidArgumentException When the package name spans more than one line
+     */
+    public static function getHeader(string $package): string
     {
+        // Warning: a package name that spans lines corrupts every file, and no check reports it.
+        // This method puts the argument into the first line of the header, so an assembled header
+        // builds "This file is part of the <whole header> package". PHP CS Fixer writes that text
+        // into every file, and the check afterwards passes, because the files and the configuration
+        // then agree with each other. A loud failure is better than a silent rewrite, so a name
+        // that spans lines stops here.
+        if (str_contains($package, "\n")) {
+            throw new InvalidArgumentException(
+                'Rules::getHeader() takes a package name, such as "Valkyrja Framework", and it was'
+                . ' given text that spans lines. A caller that passes the assembled header must'
+                . ' pass the name instead.'
+            );
+        }
+
+        return <<<HEADER
+            This file is part of the $package package.
+
+            Copyright (c) 2016-present Melech Mizrachi
+
+            Released under the MIT License. See LICENSE.md for details.
+            HEADER;
+    }
+
+    /**
+     * @param string $package The package name the header states, for example `Valkyrja Framework`.
+     *                        Pass the name, never an assembled header.
+     *
+     * @throws InvalidArgumentException When the package name spans more than one line
+     */
+    public static function getConfig(Finder $finder, string $package): Config
+    {
+        $header = self::getHeader($package);
+
         return new Config()
             ->setParallelConfig(
                 new ParallelConfig(
