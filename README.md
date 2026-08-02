@@ -32,7 +32,7 @@ Usage
 Call `Rules::getConfig()` from your `.php-cs-fixer.php` configuration file
 and set the finder on the returned config:
 
-```
+```php
 // .php-cs-fixer.php
 use Valkyrja\Fixer\Rules;
 use PhpCsFixer\Finder;
@@ -41,23 +41,45 @@ $finder = Finder::create()
     ->in(__DIR__ . '/src')
     ->in(__DIR__ . '/tests');
 
-$header = <<<HEADER
-This file is part of the Acme package.
-
-Copyright (c) YYYY-present Acme Corp
-
-Released under the MIT License. See LICENSE.md for details.
-HEADER;
-
-return Rules::getConfig($finder, $header);
+return Rules::getConfig($finder, 'Valkyrja Framework');
 ```
 
 `getConfig()` accepts two required arguments:
 
-| Parameter | Type     | Description                                                                                                          |
-| --------- | -------- | -------------------------------------------------------------------------------------------------------------------- |
-| `$finder` | `Finder` | The PHP CS Fixer `Finder` instance specifying which files to lint                                                    |
-| `$header` | `string` | The license/copyright text injected into every file's `header_comment` block, placed after `declare(strict_types=1)` |
+| Parameter  | Type     | Description                                                                         |
+| ---------- | -------- | ----------------------------------------------------------------------------------- |
+| `$finder`  | `Finder` | The PHP CS Fixer `Finder` instance specifying which files to lint                   |
+| `$package` | `string` | The package name that the copyright header states, for example `Valkyrja Framework` |
+
+### The Copyright Header
+
+`Rules::getHeader()` builds the header from the package name. This package
+holds the text, so a repository states only its own name:
+
+```php
+Rules::getHeader('Valkyrja Framework');
+```
+
+The call returns the following text, and `getConfig()` passes the same text
+to the `header_comment` rule:
+
+```
+This file is part of the Valkyrja Framework package.
+
+Copyright (c) 2016-present Melech Mizrachi
+
+Released under the MIT License. See LICENSE.md for details.
+```
+
+Only the package name changes between repositories.
+[`COPYRIGHT_HEADER.md`][copyright header url] maps each repository to its
+package name.
+
+Warning: pass the package name, never an assembled header. A header that
+this method builds from an assembled header names the whole header as the
+package, and PHP CS Fixer then writes that text into every file.
+`getHeader()` therefore throws an `InvalidArgumentException` when the
+package name spans more than one line.
 
 Configuration Details
 ---------------------
@@ -168,8 +190,9 @@ with `use` statements rather than referenced with a leading backslash.
 
 **`header_comment`**
 
-The string passed to `getConfig($header)` is injected as a `/* */` block
-comment immediately after `declare(strict_types=1);` in every file.
+The header that `getHeader()` builds from the package name is injected as a
+`/* */` block comment immediately after `declare(strict_types=1);` in every
+file.
 
 **`increment_style`**
 
@@ -348,6 +371,7 @@ Licensed under the [MIT license][MIT license url]. See
 [`LICENSE.md`](./LICENSE.md).
 
 [contributing url]: https://github.com/valkyrjaio/.github/blob/master/CONTRIBUTING.md
+[copyright header url]: https://github.com/valkyrjaio/.github/blob/master/COPYRIGHT_HEADER.md
 [vocabulary url]: https://github.com/valkyrjaio/.github/blob/master/VOCABULARY.md
 [security vulnerabilities url]: https://github.com/valkyrjaio/.github/blob/master/SECURITY.md
 [MIT license url]: https://opensource.org/licenses/MIT
