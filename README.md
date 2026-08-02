@@ -56,7 +56,7 @@ return Rules::getConfig($finder, $header);
 `getConfig()` accepts two required arguments:
 
 | Parameter | Type     | Description                                                                                                          |
-|-----------|----------|----------------------------------------------------------------------------------------------------------------------|
+| --------- | -------- | -------------------------------------------------------------------------------------------------------------------- |
 | `$finder` | `Finder` | The PHP CS Fixer `Finder` instance specifying which files to lint                                                    |
 | `$header` | `string` | The license/copyright text injected into every file's `header_comment` block, placed after `declare(strict_types=1)` |
 
@@ -68,7 +68,7 @@ Configuration Details
 The config runs PHP CS Fixer in parallel:
 
 | Setting           | Value       |
-|-------------------|-------------|
+| ----------------- | ----------- |
 | Max processes     | 5           |
 | Files per process | 10          |
 | Process timeout   | 240 seconds |
@@ -78,7 +78,7 @@ The config runs PHP CS Fixer in parallel:
 The following preset rule sets are applied in order:
 
 | Set                     | Notes                                          |
-|-------------------------|------------------------------------------------|
+| ----------------------- | ---------------------------------------------- |
 | `@PHP80Migration:risky` | PHP 8.0 migration including risky fixers       |
 | `@PHP81Migration`       | PHP 8.1 migration                              |
 | `@PER-CS`               | PHP Evolving Recommendation coding style       |
@@ -93,7 +93,7 @@ Risky fixers are enabled (`setRiskyAllowed(true)`).
 #### Enabled
 
 | Rule                                       | Description                                                            |
-|--------------------------------------------|------------------------------------------------------------------------|
+| ------------------------------------------ | ---------------------------------------------------------------------- |
 | `no_unused_imports`                        | Remove unused `use` statements                                         |
 | `align_multiline_comment`                  | Align multiline doc comments                                           |
 | `array_indentation`                        | Each array element on its own line is indented once                    |
@@ -122,7 +122,7 @@ Risky fixers are enabled (`setRiskyAllowed(true)`).
 These rules are explicitly turned off, overriding preset defaults:
 
 | Rule                         | Reason                                                          |
-|------------------------------|-----------------------------------------------------------------|
+| ---------------------------- | --------------------------------------------------------------- |
 | `no_superfluous_phpdoc_tags` | PHPDoc tags are kept even when types are declared in signatures |
 | `single_line_throw`          | `throw` expressions may span multiple lines                     |
 | `unary_operator_spaces`      | No space required around unary operators                        |
@@ -143,7 +143,7 @@ $a = [1, 2, 3];
 **`binary_operator_spaces`**
 
 | Operator | Alignment                                                                           |
-|----------|-------------------------------------------------------------------------------------|
+| -------- | ----------------------------------------------------------------------------------- |
 | `=`      | `align_single_space` — assignment operators aligned within a block                  |
 | `=>`     | `align_single_space_minimal_by_scope` — array arrows aligned minimally within scope |
 
@@ -296,7 +296,7 @@ designed to be called from other repositories via `workflow_call`.
 ### Inputs
 
 | Input              | Type    | Default                   | Description                                                                                                                                           |
-|--------------------|---------|---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------------ | ------- | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `paths`            | string  | —                         | **Required.** YAML filter spec with two keys: `ci` (CI config files that trigger a base-branch fetch) and `files` (all files that trigger the check). |
 | `post-pr-comment`  | boolean | `true`                    | Post a PR comment on failure and remove it on success. Disable when the calling workflow handles its own reporting.                                   |
 | `composer-options` | string  | `''`                      | Extra flags passed to every `composer install` step (e.g. `--ignore-platform-req=ext-openswoole`).                                                    |
@@ -349,9 +349,6 @@ Licensed under the [MIT license][MIT license url]. See
 [`LICENSE.md`](./LICENSE.md).
 
 [contributing url]: https://github.com/valkyrjaio/.github/blob/master/CONTRIBUTING.md
-
 [vocabulary url]: https://github.com/valkyrjaio/.github/blob/master/VOCABULARY.md
-
 [security vulnerabilities url]: https://github.com/valkyrjaio/.github/blob/master/SECURITY.md
-
 [MIT license url]: https://opensource.org/licenses/MIT
