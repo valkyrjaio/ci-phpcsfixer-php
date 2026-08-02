@@ -44,10 +44,9 @@ $finder = Finder::create()
 $header = <<<HEADER
 This file is part of the Acme package.
 
-(c) Acme Corp <acme@example.com>
+Copyright (c) YYYY-present Acme Corp
 
-For the full copyright and license information, please view the LICENSE
-file that was distributed with this source code.
+Released under the MIT License. See LICENSE.md for details.
 HEADER;
 
 return Rules::getConfig($finder, $header);
