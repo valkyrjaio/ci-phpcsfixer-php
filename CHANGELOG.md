@@ -1,6 +1,16 @@
 # Release Notes for 26.x
 
-## [Unreleased](https://github.com/valkyrjaio/phpcsfixer/compare/v26.3.0...26.x)
+## [Unreleased](https://github.com/valkyrjaio/phpcsfixer/compare/v26.4.0...26.x)
+
+## [v26.4.0](https://github.com/valkyrjaio/phpcsfixer/compare/v26.3.0...v26.4.0) - 2026-08-03
+
+* [Rules] refactor: Split getConfig() into focused methods by [@MelechMizrachi](https://github.com/MelechMizrachi) in https://github.com/valkyrjaio/ci-phpcsfixer-php/pull/169
+* [Copyright] ci: Add the copyright header check by [@MelechMizrachi](https://github.com/MelechMizrachi) in https://github.com/valkyrjaio/ci-phpcsfixer-php/pull/170
+* [Workflow] ci: Update .github workflow refs to v26.22.0 by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-phpcsfixer-php/pull/171
+* [Composer] build!: Rename the package to valkyrja/ci-phpcsfixer by [@MelechMizrachi](https://github.com/MelechMizrachi) in https://github.com/valkyrjaio/ci-phpcsfixer-php/pull/172
+* [Workflow] ci: Update .github workflow refs to v26.23.0 by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-phpcsfixer-php/pull/173
+* [Dependency] build: Require the renamed CI tool packages by [@MelechMizrachi](https://github.com/MelechMizrachi) in https://github.com/valkyrjaio/ci-phpcsfixer-php/pull/174
+* [Dependency] build: Update composer dependencies by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-phpcsfixer-php/pull/175
 
 ## [v26.3.0](https://github.com/valkyrjaio/phpcsfixer/compare/v26.2.2...v26.3.0) - 2026-08-02
 
