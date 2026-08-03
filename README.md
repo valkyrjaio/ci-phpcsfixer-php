@@ -9,9 +9,9 @@ rule set and workflow that enforce consistent code style across consuming
 repositories.
 
 <p>
-    <a href="https://packagist.org/packages/valkyrja/phpcsfixer"><img src="https://poser.pugx.org/valkyrja/phpcsfixer/require/php" alt="PHP Version Require"></a>
-    <a href="https://packagist.org/packages/valkyrja/phpcsfixer"><img src="https://poser.pugx.org/valkyrja/phpcsfixer/v" alt="Latest Stable Version"></a>
-    <a href="https://packagist.org/packages/valkyrja/phpcsfixer"><img src="https://poser.pugx.org/valkyrja/phpcsfixer/license" alt="License"></a>
+    <a href="https://packagist.org/packages/valkyrja/ci-phpcsfixer"><img src="https://poser.pugx.org/valkyrja/ci-phpcsfixer/require/php" alt="PHP Version Require"></a>
+    <a href="https://packagist.org/packages/valkyrja/ci-phpcsfixer"><img src="https://poser.pugx.org/valkyrja/ci-phpcsfixer/v" alt="Latest Stable Version"></a>
+    <a href="https://packagist.org/packages/valkyrja/ci-phpcsfixer"><img src="https://poser.pugx.org/valkyrja/ci-phpcsfixer/license" alt="License"></a>
     <a href="https://github.com/valkyrjaio/ci-phpcsfixer-php/actions/workflows/ci.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/ci-phpcsfixer-php/actions/workflows/ci.yml/badge.svg?branch=26.x" alt="CI Status"></a>
     <a href="https://scrutinizer-ci.com/g/valkyrjaio/ci-phpcsfixer-php/?branch=26.x"><img src="https://scrutinizer-ci.com/g/valkyrjaio/ci-phpcsfixer-php/badges/quality-score.png?b=26.x" alt="Scrutinizer"></a>
     <a href="https://coveralls.io/github/valkyrjaio/ci-phpcsfixer-php?branch=26.x"><img src="https://coveralls.io/repos/github/valkyrjaio/ci-phpcsfixer-php/badge.svg?branch=26.x" alt="Coverage Status" /></a>
@@ -23,7 +23,7 @@ Installation
 ------------
 
 ```
-composer require valkyrja/phpcsfixer
+composer require valkyrja/ci-phpcsfixer
 ```
 
 Usage
