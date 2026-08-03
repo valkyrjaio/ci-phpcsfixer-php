@@ -1,5 +1,5 @@
 {
-  "name"              : "valkyrja/phpcsfixer",
+  "name"              : "valkyrja/ci-phpcsfixer",
   "type"              : "project",
   "description"       : "PHP CS Fixer for the Valkyrja Project.",
   "homepage"          : "https://www.valkyrja.io/",
