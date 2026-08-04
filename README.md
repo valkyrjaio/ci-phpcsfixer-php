@@ -370,8 +370,8 @@ License
 Licensed under the [MIT license][MIT license url]. See
 [`LICENSE.md`](./LICENSE.md).
 
-[contributing url]: https://github.com/valkyrjaio/.github/blob/master/CONTRIBUTING.md
-[copyright header url]: https://github.com/valkyrjaio/.github/blob/master/COPYRIGHT_HEADER.md
-[vocabulary url]: https://github.com/valkyrjaio/.github/blob/master/VOCABULARY.md
-[security vulnerabilities url]: https://github.com/valkyrjaio/.github/blob/master/SECURITY.md
+[contributing url]: https://github.com/valkyrjaio/.github/blob/26.x/CONTRIBUTING.md
+[copyright header url]: https://github.com/valkyrjaio/.github/blob/26.x/COPYRIGHT_HEADER.md
+[vocabulary url]: https://github.com/valkyrjaio/.github/blob/26.x/VOCABULARY.md
+[security vulnerabilities url]: https://github.com/valkyrjaio/.github/blob/26.x/SECURITY.md
 [MIT license url]: https://opensource.org/licenses/MIT
