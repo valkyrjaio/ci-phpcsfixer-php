@@ -1,6 +1,12 @@
 # Release Notes for 26.x
 
-## [Unreleased](https://github.com/valkyrjaio/phpcsfixer/compare/v26.4.2...26.x)
+## [Unreleased](https://github.com/valkyrjaio/phpcsfixer/compare/v26.4.3...26.x)
+
+## [v26.4.3](https://github.com/valkyrjaio/phpcsfixer/compare/v26.4.2...v26.4.3) - 2026-08-06
+
+* [Link] fix: Pin the architecture document links to the version branch by [@MelechMizrachi](https://github.com/MelechMizrachi) in https://github.com/valkyrjaio/ci-phpcsfixer-php/pull/180
+* [Workflow] ci: Update .github workflow refs to v26.24.0 by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-phpcsfixer-php/pull/182
+* [Workflow] ci: Update .github workflow refs to v26.24.1 by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-phpcsfixer-php/pull/183
 
 ## [v26.4.2](https://github.com/valkyrjaio/phpcsfixer/compare/v26.4.1...v26.4.2) - 2026-08-05
 
