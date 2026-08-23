@@ -1,6 +1,12 @@
 # Release Notes for 26.x
 
-## [Unreleased](https://github.com/valkyrjaio/phpcsfixer/compare/v26.4.19...26.x)
+## [Unreleased](https://github.com/valkyrjaio/phpcsfixer/compare/v26.4.20...26.x)
+
+## [v26.4.20](https://github.com/valkyrjaio/phpcsfixer/compare/v26.4.19...v26.4.20) - 2026-08-23
+
+* [Dependency] build: Update composer dependencies by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-phpcsfixer-php/pull/222
+* [Dependency] build: Update composer dependencies by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-phpcsfixer-php/pull/223
+* [Workflow] ci: Update .github workflow refs to v26.25.3 by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-phpcsfixer-php/pull/224
 
 ## [v26.4.19](https://github.com/valkyrjaio/phpcsfixer/compare/v26.4.18...v26.4.19) - 2026-08-22
 
