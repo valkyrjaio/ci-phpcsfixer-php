@@ -1,6 +1,11 @@
 # Release Notes for 26.x
 
-## [Unreleased](https://github.com/valkyrjaio/phpcsfixer/compare/v26.4.72...26.x)
+## [Unreleased](https://github.com/valkyrjaio/phpcsfixer/compare/v26.4.73...26.x)
+
+## [v26.4.73](https://github.com/valkyrjaio/phpcsfixer/compare/v26.4.72...v26.4.73) - 2026-10-19
+
+* [Dependency] build: Update composer dependencies by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-phpcsfixer-php/pull/331
+* [Dependency] build: Update composer dependencies by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-phpcsfixer-php/pull/332
 
 ## [v26.4.72](https://github.com/valkyrjaio/phpcsfixer/compare/v26.4.71...v26.4.72) - 2026-10-18
 
