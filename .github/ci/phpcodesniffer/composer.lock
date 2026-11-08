@@ -101,8 +101,7 @@
                     "type": "thanks_dev"
                 }
             ],
-            "time": "2026-05-06T08:26:05+00:00",
-            "published-time": "2026-05-06T12:56:03+00:00"
+            "time": "2026-05-06T08:26:05+00:00"
         },
         {
             "name": "phpstan/phpdoc-parser",
@@ -149,8 +148,7 @@
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
                 "source": "https://github.com/phpstan/phpdoc-parser/tree/2.4.1"
             },
-            "time": "2026-10-30T19:36:28+00:00",
-            "published-time": "2026-10-30T19:37:11+00:00"
+            "time": "2026-10-30T19:36:28+00:00"
         },
         {
             "name": "slevomat/coding-standard",
@@ -215,8 +213,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-10-28T16:34:46+00:00",
-            "published-time": "2026-10-28T16:36:09+00:00"
+            "time": "2026-10-28T16:34:46+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -300,21 +297,20 @@
                     "type": "thanks_dev"
                 }
             ],
-            "time": "2026-08-06T02:45:27+00:00",
-            "published-time": "2026-08-06T02:57:35+00:00"
+            "time": "2026-08-06T02:45:27+00:00"
         },
         {
             "name": "valkyrja/ci-phpcodesniffer",
-            "version": "v26.3.90",
+            "version": "v26.3.91",
             "source": {
                 "type": "git",
                 "url": "https://github.com/valkyrjaio/ci-phpcodesniffer-php.git",
-                "reference": "52c279f32360be04819e593f904f7ba4f1faf5c2"
+                "reference": "cc99c87146e6a8d26eab196784f5500cacbe8708"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/valkyrjaio/ci-phpcodesniffer-php/zipball/52c279f32360be04819e593f904f7ba4f1faf5c2",
-                "reference": "52c279f32360be04819e593f904f7ba4f1faf5c2",
+                "url": "https://api.github.com/repos/valkyrjaio/ci-phpcodesniffer-php/zipball/cc99c87146e6a8d26eab196784f5500cacbe8708",
+                "reference": "cc99c87146e6a8d26eab196784f5500cacbe8708",
                 "shasum": ""
             },
             "require": {
@@ -347,10 +343,9 @@
             ],
             "support": {
                 "issues": "https://github.com/valkyrjaio/ci-phpcodesniffer-php/issues",
-                "source": "https://github.com/valkyrjaio/ci-phpcodesniffer-php/tree/v26.3.90"
+                "source": "https://github.com/valkyrjaio/ci-phpcodesniffer-php/tree/v26.3.91"
             },
-            "time": "2026-11-05T18:29:46+00:00",
-            "published-time": "2026-11-05T18:29:58+00:00"
+            "time": "2026-11-07T16:46:42+00:00"
         }
     ],
     "aliases": [],
@@ -362,5 +357,5 @@
         "php": ">=8.4.27"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.11.0"
+    "plugin-api-version": "2.9.0"
 }
