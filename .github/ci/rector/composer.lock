@@ -96,8 +96,7 @@
                 "issues": "https://github.com/nette/utils/issues",
                 "source": "https://github.com/nette/utils/tree/v4.1.6"
             },
-            "time": "2026-10-20T17:07:56+00:00",
-            "published-time": "2026-10-20T17:48:30+00:00"
+            "time": "2026-10-20T17:07:56+00:00"
         },
         {
             "name": "phpstan/phpstan",
@@ -161,8 +160,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-11-03T12:14:22+00:00",
-            "published-time": "2026-11-03T12:14:36+00:00"
+            "time": "2026-11-03T12:14:22+00:00"
         },
         {
             "name": "rector/rector",
@@ -219,8 +217,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-11-03T18:48:08+00:00",
-            "published-time": "2026-11-03T18:48:15+00:00"
+            "time": "2026-11-03T18:48:08+00:00"
         },
         {
             "name": "valkyrja/ci-rector",
@@ -268,8 +265,7 @@
                 "issues": "https://github.com/valkyrjaio/ci-rector-php/issues",
                 "source": "https://github.com/valkyrjaio/ci-rector-php/tree/v26.3.78"
             },
-            "time": "2026-10-25T14:46:12+00:00",
-            "published-time": "2026-10-25T14:46:21+00:00"
+            "time": "2026-10-25T14:46:12+00:00"
         }
     ],
     "aliases": [],
@@ -281,5 +277,5 @@
         "php": ">=8.4.27"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.11.0"
+    "plugin-api-version": "2.9.0"
 }
