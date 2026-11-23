@@ -26,5 +26,5 @@ final class FixerInfo
      *
      * @var non-empty-string
      */
-    public const string VERSION_BUILD_DATE_TIME = 'November 22 2026 11:10:39 MST';
+    public const string VERSION_BUILD_DATE_TIME = 'November 23 2026 15:22:06 MST';
 }
